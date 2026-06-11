@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>NOVEL</title>
+<meta name="description contents="JAne Bellarus">
+<style>
+
+    body{margin:0;
+          padding:0;
+          width:100%;
+          min-height:100vh;
+          overflow-x:hidden;
+
+          background-image: url("notsoback.jpeg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-color: #f7f4ee;
+          justify-content: center;  
+          align-items: center;           
+
+          display: flex;
+          flex-direction: column;
+
+         };
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:rgba(0,0,0,0.45);
+
+    padding:20px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #f5f2eb;
+}
+
+h2,h3{
+    font-family:'Raleway',sans-serif;
+    
+    color:#d9cfc3;
+
+    letter-spacing:3px;
+   
+    text-transform:uppercase;
+}
+
+ p {
+    font-family: 'Cormorant Garamond', serif;
+    color:#d9cfc3;
+    line-height: 1.8;
+    font-size: 19px;
+}
+
+
+.tagline{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.6rem;
+
+    max-width:600px;
+
+    color:#f1e8dc;
+
+    font-style:italic;
+}
+
+header{
+    position:absolute;
+
+    top:0;
+    width:100%;
+
+    padding:25px 0;
+}
+
+nav{
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+}
+
+nav a{
+    text-decoration:none;
+
+    color:#f5f1ea;
+
+    font-family:'Raleway',sans-serif;
+
+    letter-spacing:1px;
+}
+
+
+.music-player{
+
+            width:320px;
+
+            padding:20px;
+
+            border-radius:25px;
+
+            background:rgba(255,255,255,0.15);
+
+            backdrop-filter:blur(15px);
+
+            text-align:center;
+
+            box-shadow:
+            0 0 20px rgba(255,255,255,0.3);
+
+            animation: floatPlayer 4s infinite ease-in-out;
+        }
+
+        @keyframes floatPlayer{
+
+            0%{
+                transform:translateY(0px);
+            }
+
+            50%{
+                transform:translateY(-10px);
+            }
+
+            100%{
+                transform:translateY(0px);
+                 }
+
+         }
+ music-player p{
+      color:white;
+ 
+      letter-spacing:2px;
+
+}
+
+.story-card{
+    max-width: 750px;
+    margin: 80px auto;
+    padding: 35px 40px;
+
+    background: rgba(15,15,20,0.75);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+}
+
+.story-card p{
+    color: #F5F2E8;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+
+.story-card{
+    box-shadow:
+    0 0 30px rgba(217,168,93,0.15),
+    0 10px 40px rgba(0,0,0,0.45);
+}
+
+.name-card{
+    position: relative;
+    width: 320px;
+
+    padding: 35px 30px;
+
+    background: rgba(8,8,8,0.78);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(212,175,115,0.25);
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 0 25px rgba(212,175,115,0.08),
+        0 10px 40px rgba(0,0,0,0.45);
+
+    overflow: hidden;
+}
+
+.card-glow{
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    background: radial-gradient(
+        circle,
+        rgba(212,175,115,0.15),
+        transparent 70%
+    );
+
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    pointer-events: none;
+}
+
+.name-card h1{
+    color: #F8F1E4;
+
+    font-size: 3rem;
+    font-weight: 300;
+
+    margin: 0;
+}
+
+.name-card h2{
+    color: #C9A36A;
+
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: 400;
+
+    margin-top: -10px;
+}
+
+.divider{
+    margin: 20px 0;
+    color: #C9A36A;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.divider::before,
+.divider::after{
+    content: "";
+    width: 60px;
+    height: 1px;
+
+    background: rgba(212,175,115,0.4);
+}
+
+.role{
+    color: #D9D2C4;
+
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+
+    margin-bottom: 25px;
+}
+
+.quote{
+    color: #EFE7D8;
+
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.main-characters{
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 80px auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    flex-wrap: wrap;
+}
+
+.main-characters{
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 100px auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+}
+
+
+.music-player {
+  width: 320px;
+  margin: 40px auto;
+  padding: 20px;
+
+  border-radius: 18px;
+  background: #1a1410;
+
+  border: 3px solid #caa472;
+
+  box-shadow:
+    0 10px 0 #0e0a08,
+    0 25px 40px rgba(0,0,0,0.6);
+
+  font-family: "Courier New", monospace;
+  color: #f5e6c8;
+
+  text-align: center;
+  position: relative;
+
+  animation: floatPlayer 4s ease-in-out infinite;
+}
+
+
+@keyframes floatPlayer {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+
+.display {
+  background: #0b0f0c;
+  border: 2px inset #caa472;
+
+  padding: 10px;
+  margin-bottom: 12px;
+
+  color: #7CFF6B;
+  font-size: 13px;
+  letter-spacing: 1px;
+
+  text-shadow: 0 0 6px #3cff3c;
+}
+
+
+.tape-window {
+  margin: 15px auto;
+  width: 100%;
+  height: 60px;
+
+  background: #0b0f0c;
+  border: 2px solid #caa472;
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+.tape-wheel {
+  width: 18px;
+  height: 18px;
+
+  border: 3px solid #caa472;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 20px;
+  left: 40px;
+
+  animation: spin 2s linear infinite;
+}
+
+.tape-wheel.right {
+  left: auto;
+  right: 40px;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+
+.now-playing {
+  margin-top: 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #f5e6c8;
+
+  animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.4; }
+}
+
+
+.music-player audio {
+  width: 100%;
+  margin-top: 10px;
+
+  filter: sepia(1) contrast(1.2);
+}
+
+
+.transition-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 120px; /* space beneath button */
+}
+
+
+.memory-btn {
+  display: inline-block;
+
+  padding: 16px 34px;
+
+  color: #d2b07a; /* soft gold */
+  text-decoration: none;
+
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+
+  background: rgba(10, 10, 10, 0.88);
+  border: 1px solid rgba(210, 176, 122, 0.22);
+  border-radius: 18px;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.7),
+    0 0 16px rgba(210, 176, 122, 0.10);
+
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.memory-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -70%;
+
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(210, 176, 122, 0.14),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+  transition: 0.6s ease;
+}
+
+.memory-btn:hover {
+  transform: translateY(-3px);
+
+  color: #ecd2a2;
+
+  border-color: rgba(210, 176, 122, 0.45);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.75),
+    0 0 24px rgba(210, 176, 122, 0.16);
+}
+
+.memory-btn:hover::before {
+  left: 120%;
+}
+
+.memory-btn:active {
+  transform: scale(0.98);
+}
+
+</style>
+
+</head>
+ 
+<body>
+
+
+<h1> A not so in Love<br>
+  Love story </h1>
+
+<div class="music-player">
+
+  <div class="display">
+    NOW PLAYING ▷ notso.mp3
+  </div>
+
+  <audio controls autoplay loop>
+    <source src="notso.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="tape-window">
+    <div class="tape-wheel"></div>
+    <div class="tape-wheel right"></div>
+  </div>
+
+  <p class="now-playing">✦ INLOVE • PLAYING ✦</p>
+
+</div>
+
+<div class= "story-card">
+<p> A Not so in love: Love story. A heart warming and crumbling story about love,regret,second chances and last minute changes of loved ones</p>
+
+<p>Isleen Mortain wasn't looking for a second chance.</p>
+
+<p>She was planning a wedding.</p>
+
+<p>Engaged to a man who loves her wholeheartedly, she had long ago accepted that some stories are meant to remain unfinished. The past belonged where it was, and the future was already waiting for her.</p>
+
+<p>Until a familiar face walked back into her life.</p>
+
+<p>Suddenly, forgotten conversations, lingering glances, and years of unanswered questions begin to surface. What starts as nostalgia slowly becomes something far more dangerous: the realization that certain feelings never truly disappear.</p>
+
+<p>Now, standing between the life she's promised and the one she never got to explore, she must decide whether love is about holding on, letting go, or finding the courage to live with the consequences of either choice.</p>
+
+<p>A story about timing, choice, and the people who leave fingerprints on our hearts long after they're gone.</p>
+
+</div>
+
+<section class="main-characters">
+
+    <div class="name-card">
+        <div class="card-glow"></div>
+
+        <h1>Isleen</h1>
+        <h2>Mortain</h2>
+
+        <div class="divider">
+            <span>✦</span>
+
+       <img src="isle2.jpeg">
+
+            <span>✦</span>
+        </div>
+
+        <p class="role">
+            Team Leader • Strategy & Operations
+        </p>
+
+        <p class="quote">
+            "I love work in progress, not in pieces."
+        </p>
+    </div>
+
+    <div class="name-card leo-card">
+        <div class="card-glow"></div>
+
+        <h1>Leopold</h1>
+        <h2>Fairfax</h2>
+
+        <div class="divider">
+            <span>✦</span>
+         
+           <img src="leo2.jpeg">
+         
+           <span>✦</span>
+       
+        </div>
+
+        <p class="role">
+            Head Marketing Agent • Former Hockey Player
+        </p>
+
+        <p class="quote">
+            "Some hearts never leave. They simply stay quiet."
+        </p>
+    </div>
+
+</section>
+
+
+<div class="transition-wrap">
+  <a href="heard.html" class="memory-btn">
+   And Now "When I First Heard You"
+  </a>
+</div>
