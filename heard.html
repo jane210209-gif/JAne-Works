@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>NOVEL2</title>
+<meta name="description contents="JAne Bellarus">
+<style>
+
+    body{margin:0;
+          padding:0;
+          width:100%;
+          min-height:100vh;
+          overflow-x:hidden;
+
+          background-image: url("heard3.jpeg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-color: #f7f4ee;
+
+          display: flex;
+          flex-direction: column;
+         }
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:rgba(0,0,0,0.45);
+
+    padding:20px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #f5f2eb;
+}
+
+h2,h3{
+    font-family:'Raleway',sans-serif;
+    
+    color:#d9cfc3;
+
+    letter-spacing:3px;
+   
+    text-transform:uppercase;
+}
+
+ p {
+    font-family: 'Cormorant Garamond', serif;
+    color:#d9cfc3;
+    line-height: 1.8;
+    font-size: 19px;
+}
+
+
+.tagline{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.6rem;
+
+    max-width:600px;
+
+    color:#f1e8dc;
+
+    font-style:italic;
+}
+
+header{
+    position:absolute;
+
+    top:0;
+    width:100%;
+
+    padding:25px 0;
+}
+
+nav{
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+}
+
+nav a{
+    text-decoration:none;
+
+    color:#f5f1ea;
+
+    font-family:'Raleway',sans-serif;
+
+    letter-spacing:1px;
+}
+
+
+.music-player{
+
+            width:320px;
+
+            padding:20px;
+
+            border-radius:25px;
+
+            background:rgba(255,255,255,0.15);
+
+            backdrop-filter:blur(15px);
+
+            text-align:center;
+
+            box-shadow:
+            0 0 20px rgba(255,255,255,0.3);
+
+            animation: floatPlayer 4s infinite ease-in-out;
+        }
+
+        @keyframes floatPlayer{
+
+            0%{
+                transform:translateY(0px);
+            }
+
+            50%{
+                transform:translateY(-10px);
+            }
+
+            100%{
+                transform:translateY(0px);
+                 }
+
+         }
+ .music-player p{
+      color:white;
+ 
+      letter-spacing:2px;
+
+}
+
+.story-card{
+    max-width: 750px;
+    margin: 80px auto;
+    padding: 35px 40px;
+
+    background: rgba(15,15,20,0.75);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+}
+
+.story-card p{
+    color: #F5F2E8;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+
+.story-card{
+    box-shadow:
+    0 0 30px rgba(217,168,93,0.15),
+    0 10px 40px rgba(0,0,0,0.45);
+}
+
+.name-card{
+    position: relative;
+    width: 320px;
+
+    padding: 35px 30px;
+
+    background: rgba(8,8,8,0.78);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(212,175,115,0.25);
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 0 25px rgba(212,175,115,0.08),
+        0 10px 40px rgba(0,0,0,0.45);
+
+    overflow: hidden;
+}
+
+.card-glow{
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    background: radial-gradient(
+        circle,
+        rgba(212,175,115,0.15),
+        transparent 70%
+    );
+
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    pointer-events: none;
+}
+
+.name-card h1{
+    color: #F8F1E4;
+
+    font-size: 3rem;
+    font-weight: 300;
+
+    margin: 0;
+}
+
+.name-card h2{
+    color: #C9A36A;
+
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: 400;
+
+    margin-top: -10px;
+}
+
+.divider{
+    margin: 20px 0;
+    color: #C9A36A;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.divider::before,
+.divider::after{
+    content: "";
+    width: 60px;
+    height: 1px;
+
+    background: rgba(212,175,115,0.4);
+}
+
+.role{
+    color: #D9D2C4;
+
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+
+    margin-bottom: 25px;
+}
+
+.quote{
+    color: #EFE7D8;
+
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.main-characters{
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 80px auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    flex-wrap: wrap;
+}
+
+.main-characters{
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 100px auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+}
+
+
+.podcast-player {
+  width: 360px;
+  margin: 50px auto;
+  padding: 25px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    145deg,
+    #0f0f14,
+    #15151d
+  );
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.7),
+    inset 0 0 20px rgba(255,255,255,0.03);
+
+  text-align: center;
+
+  font-family: "Arial", sans-serif;
+
+  color: #e8e8e8;
+
+  position: relative;
+
+  animation: floatPod 5s ease-in-out infinite;
+}
+
+
+@keyframes floatPod {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+
+.mic-glow {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+
+  top: -80px;
+  right: -60px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 180, 120, 0.18),
+    transparent 70%
+  );
+
+  filter: blur(3px);
+}
+
+
+.title {
+  font-size: 13px;
+  letter-spacing: 2px;
+
+  color: #cfcfcf;
+  opacity: 0.8;
+}
+
+
+.episode {
+  margin: 12px 0;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #ffffff;
+}
+
+
+.podcast-player audio {
+  width: 100%;
+  margin-top: 10px;
+
+  filter: invert(0.9) contrast(1.2);
+  border-radius: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+
+  background: #2a2a35;
+
+  border-radius: 20px;
+
+  margin-top: 15px;
+
+  overflow: hidden;
+}
+
+.progress {
+  width: 50%;
+  height: 100%;
+
+  background: linear-gradient(90deg, #ffb86b, #ff7b72);
+
+  animation: progressMove 3s infinite ease-in-out;
+}
+
+@keyframes progressMove {
+  0% { width: 20%; }
+  50% { width: 90%; }
+  100% { width: 20%; }
+}
+
+.quote {
+  margin-top: 15px;
+
+  font-size: 12px;
+  font-style: italic;
+
+  color: #bdbdbd;
+
+  opacity: 0.9;
+}
+
+.next-page-container{
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+
+    margin-top:100px;
+    margin-bottom:180px;
+}
+
+.night-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+
+    padding:18px 42px;
+
+    background:linear-gradient(
+        145deg,
+        #181818,
+        #0d0d0d
+    );
+
+    color:#f5e8e8;
+
+    text-decoration:none;
+
+    border:1px solid rgba(138, 24, 39, 0.8);
+    border-radius:50px;
+
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.35rem;
+
+    letter-spacing:0.5px;
+
+    box-shadow:
+        0 0 15px rgba(138,24,39,0.15),
+        0 10px 30px rgba(0,0,0,0.45);
+
+    transition:all 0.4s ease;
+}
+
+.night-btn:hover{
+    transform:translateY(-3px);
+
+    color:white;
+
+    border-color:#b22234;
+
+    box-shadow:
+        0 0 30px rgba(178,34,52,0.35),
+        0 15px 40px rgba(0,0,0,0.55);
+}
+
+.night-btn::before{
+    content:"🎙";
+    color:#b22234;
+}
+
+</style>
+
+</head>
+ 
+<body>
+
+
+<h1> When I First Heard You </h1>
+
+<div class="podcast-player">
+
+  <div class="mic-glow"></div>
+
+  <div class="title">
+    🎙️ NOW PLAYING PODCAST
+  </div>
+
+  <div class="episode">
+    “Episode 28: this day was..”
+  </div>
+
+  <audio controls autoplay loop>
+    <source src="heard.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="progress-bar">
+    <div class="progress"></div>
+  </div>
+
+  <p class="quote">
+    “Some conversations stay with you longer than people do.”
+  </p>
+
+</div>
+
+<div class="story-card">
+<p>Delaney Marinos has built her career on facts, evidence, and winning impossible cases. As one of the most respected young lawyers in the country, she has little time for distractions.</p>
+
+<p>Except for one.</p>
+
+<p>A small podcast with barely any listeners.</p>
+
+<p>Hosted anonymously by a man whose voice has become a familiar companion during late nights at the office, the show is thoughtful, honest, and strangely comforting. Delaney never misses an episode, even if no one else seems to know it exists.</p>
+
+<p>Then she takes on a high-profile case for the second son of the powerful Sterling family.</p>
+
+<p>The last thing she expects is to discover that the family's elusive third heir is the voice she's been listening to for years.</p>
+
+<p>Lyle Sterling is nothing like the headlines that follow his name. Quiet where others are loud, observant where others seek attention, he keeps his podcast hidden from the world for reasons of his own. But when Delaney unknowingly becomes part of his life, the distance between anonymous conversations and reality begins to disappear.</p>
+
+<p>As a complicated legal battle unfolds and family pressures mount, Delaney and Lyle find themselves drawn together by the one place they had already known each other all along: a voice in the dark and someone who was listening.</p>
+
+<p>A story about unexpected connections, hidden truths, and finding the person you've been searching for without ever knowing their name.</p>
+</div>
+
+
+<section class="main-characters">
+
+    <div class="name-card">
+        <div class="card-glow"></div>
+
+        <h1>Delaney</h1>
+        <h2>Marinos</h2>
+
+        <div class="divider">
+            <span>✦</span>
+
+          <img src="del2.jpeg">
+
+             <span>✦</span>
+        </div>
+
+        <p class="role">
+            Industrial Lawyer • Master Strategist
+        </p>
+
+        <p class="quote">
+            "I don't just raise my voice but also my Standards."
+        </p>
+    </div>
+
+    <div class="name-card leo-card">
+        <div class="card-glow"></div>
+
+        <h1>Lyle</h1>
+        <h2>Sterling</h2>
+
+        <div class="divider">
+            <span>✦</span>
+           <img src="lyle2.jpeg">
+            <span>✦</span>
+        </div>
+
+        <p class="role">
+            The Third Heir • Secret Podcast Host
+        </p>
+
+ <p class="quote">            
+        "They know Lyle Sterling. No one knew Lyle  ."
+        </p>
+    </div>
+
+</section>
+
+<div class="next-page-container">
+    <a href="know.html" class="night-btn">
+        Now Try "A Knowing Confession" →
+    </a>
+</div>
+

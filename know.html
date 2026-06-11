@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>NOVEL3</title>
+<meta name="description contents="JAne Bellarus">
+<style>
+
+    body{margin:0;
+          padding:0;
+          width:100%;
+          min-height:100vh;
+          overflow-x:hidden;
+
+          background-image: url("know.jpeg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-color: #f7f4ee;
+
+          display: flex;
+          flex-direction: column;
+         };
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:rgba(0,0,0,0.45);
+
+    padding:20px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #f5f2eb;
+}
+
+h2,h3{
+    font-family:'Raleway',sans-serif;
+    
+    color:#d9cfc3;
+
+    letter-spacing:3px;
+   
+    text-transform:uppercase;
+}
+
+ p {
+    font-family: 'Cormorant Garamond', serif;
+    color:#d9cfc3;
+    line-height: 1.8;
+    font-size: 19px;
+}
+
+
+.tagline{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.6rem;
+
+    max-width:600px;
+
+    color:#f1e8dc;
+
+    font-style:italic;
+}
+
+header{
+    position:absolute;
+
+    top:0;
+    width:100%;
+
+    padding:25px 0;
+}
+
+nav{
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+}
+
+nav a{
+    text-decoration:none;
+
+    color:#f5f1ea;
+
+    font-family:'Raleway',sans-serif;
+
+    letter-spacing:1px;
+}
+
+
+.music-player{
+
+            width:320px;
+
+            padding:20px;
+
+            border-radius:25px;
+
+            background:rgba(255,255,255,0.15);
+
+            backdrop-filter:blur(15px);
+
+            text-align:center;
+
+            box-shadow:
+            0 0 20px rgba(255,255,255,0.3);
+
+            animation: floatPlayer 4s infinite ease-in-out;
+        }
+
+        @keyframes floatPlayer{
+
+            0%{
+                transform:translateY(0px);
+            }
+
+            50%{
+                transform:translateY(-10px);
+            }
+
+            100%{
+                transform:translateY(0px);
+                 }
+
+         }
+ music-player p{
+      color:white;
+ 
+      letter-spacing:2px;
+
+}
+
+.story-card{
+    max-width: 750px;
+    margin: 80px auto;
+    padding: 35px 40px;
+
+    background: rgba(15,15,20,0.75);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+}
+
+.story-card p{
+    color: #F5F2E8;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+
+.story-card{
+    box-shadow:
+    0 0 30px rgba(217,168,93,0.15),
+    0 10px 40px rgba(0,0,0,0.45);
+}
+
+.name-card{
+    position: relative;
+    width: 320px;
+
+    padding: 35px 30px;
+
+    background: rgba(8,8,8,0.78);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(212,175,115,0.25);
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 0 25px rgba(212,175,115,0.08),
+        0 10px 40px rgba(0,0,0,0.45);
+
+    overflow: hidden;
+}
+
+.card-glow{
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    background: radial-gradient(
+        circle,
+        rgba(212,175,115,0.15),
+        transparent 70%
+    );
+
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    pointer-events: none;
+}
+
+.name-card h1{
+    color: #F8F1E4;
+
+    font-size: 3rem;
+    font-weight: 300;
+
+    margin: 0;
+}
+
+.name-card h2{
+    color: #C9A36A;
+
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: 400;
+
+    margin-top: -10px;
+}
+
+.divider{
+    margin: 20px 0;
+    color: #C9A36A;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.divider::before,
+.divider::after{
+    content: "";
+    width: 60px;
+    height: 1px;
+
+    background: rgba(212,175,115,0.4);
+}
+
+.role{
+    color: #D9D2C4;
+
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+
+    margin-bottom: 25px;
+}
+
+.quote{
+    color: #EFE7D8;
+
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.main-characters{
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 80px auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    flex-wrap: wrap;
+}
+
+.main-characters{
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 100px auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+}
+
+.black-uni-player {
+  width: 360px;
+  margin: 50px auto;
+  padding: 24px;
+
+  border-radius: 16px;
+
+  background: #0a0a0f;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,0.8),
+    inset 0 0 20px rgba(255,255,255,0.03);
+
+  font-family: "Arial", sans-serif;
+  color: #e5e7eb;
+
+  text-align: center;
+
+  position: relative;
+
+  transition: 0.3s ease;
+}
+
+
+.black-uni-player:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255,255,255,0.15);
+}
+
+
+.title {
+  font-size: 14px;
+  letter-spacing: 2px;
+
+  color: #cbd5e1;
+}
+
+
+.subtitle {
+  font-size: 11px;
+  opacity: 0.5;
+
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+
+.track {
+  font-size: 14px;
+  font-weight: 500;
+
+  margin-bottom: 12px;
+
+  color: #f8fafc;
+}
+
+
+.black-uni-player audio {
+  width: 100%;
+  margin-top: 10px;
+
+  border-radius: 10px;
+
+  filter: invert(1) contrast(1.2);
+}
+
+
+.progress {
+  width: 100%;
+  height: 6px;
+
+  margin-top: 14px;
+
+  background: #111827;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.bar {
+  width: 40%;
+  height: 100%;
+
+  background: linear-gradient(90deg, #64748b, #a78bfa);
+
+  animation: flow 2.5s infinite ease-in-out;
+}
+
+@keyframes flow {
+  0% { width: 20%; }
+  50% { width: 95%; }
+  100% { width: 20%; }
+}
+
+
+.mood {
+  margin-top: 12px;
+
+  font-size: 11px;
+  letter-spacing: 1px;
+
+  opacity: 0.6;
+}
+
+.next-tide-container{
+    display:flex;
+    justify-content:center;
+    margin:80px 0 120px;
+}
+
+.tide-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+
+    padding:18px 38px;
+
+    text-decoration:none;
+
+    color:#DCE7EC;
+
+    background:rgba(7,12,18,0.85);
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(110,160,190,0.25);
+    border-radius:50px;
+
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.3rem;
+    letter-spacing:1px;
+
+    transition:0.4s ease;
+
+    box-shadow:
+        0 0 25px rgba(74,120,150,0.12),
+        0 10px 35px rgba(0,0,0,0.5);
+}
+
+.tide-btn::before{
+    content:"🌙";
+    font-size:1rem;
+}
+
+.tide-btn:hover{
+    color:#ffffff;
+
+    transform:translateY(-4px);
+
+    border-color:rgba(140,190,220,0.45);
+
+    box-shadow:
+        0 0 35px rgba(120,180,220,0.25),
+        0 15px 40px rgba(0,0,0,0.6);
+}
+
+</style>
+
+</head>
+ 
+<body>
+
+
+<h1> A Knowing Confession </h1>
+
+<div class="black-uni-player">
+
+  <div class="title">
+    🎓 UNIVERSITY MIX
+  </div>
+
+  <div class="subtitle">
+    late night study • focus mode • campus silence
+  </div>
+
+  <div class="track">
+    Now Playing ▷ “Blackboard Thoughts”
+  </div>
+
+  <audio controls autoplay loop>
+    <source src="know.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="progress">
+    <div class="bar"></div>
+  </div>
+
+  <div class="mood">
+    🖤 focus • silence • depth
+  </div>
+
+</div>
+ 
+</div>
+
+<div class="story-card">
+<p>For as long as he could remember, Leander and Vesparine had been inseparable.</p.
+
+<p>Childhood friends. Partners in crime. The kind of people who knew each other's coffee orders, worst habits, and embarrassing stories without ever needing to ask.</p>
+
+<p>Which was exactly the problem.</p>
+
+<p>Because somewhere between shared study sessions, late-night calls, and years of being the most important person in each other's lives, friendship had quietly become something far more dangerous.</p>
+
+<p>At least for Leander.</p>
+
+<p>Unfortunately, Vesparine remained completely unaware.</p>
+
+<p>Or so he thought.</p>
+
+<p>Now an automobile engineering student trying to survive university, Leander finds himself battling a far greater challenge than exams or deadlines: a relentlessly chaotic friend group that seems determined to turn his private feelings into public entertainment.</p>
+
+<p>To them, Leander's hopeless devotion is obvious.</p>
+
+<p>To Vesparine, it's apparently invisible.</p>
+
+<p>And to Leander himself, every accidental touch, every shoulder nap, every moment she walks into his apartment using the spare key he regrettably gave her feels like another step toward disaster.</p>
+
+<p>Then Vesparine begins to notice things.</p>
+
+<p>The way he watches her.</p>
+
+<p>The way he remembers everything she says.</p>
+
+<p>The way he never seems to look away.</p>
+
+<p>For the first time, she starts asking questions she never thought to ask before.</p>
+
+<p>Questions that might change everything.</p>
+
+<p>Caught between years of friendship, a group of friends who have made betting pools on their relationship status, and feelings neither of them are brave enough to confess, Leander and Vesparine discover that sometimes the hardest person to fall in love with is the one who's been beside you all along.</p>
+
+</div>
+
+
+<section class="main-characters">
+
+    <div class="name-card">
+        <div class="card-glow"></div>
+
+        <h1>Vesparine</h1>
+        <h2>Leblane</h2>
+
+        <div class="divider">
+            <span>✦</span>
+
+          <img src="ves.jpeg">
+
+             <span>✦</span>
+        </div>
+
+        <p class="role">
+            Literature Student • Walking Chaos
+        </p>
+
+        <p class="quote">
+           "I wasn't trying to cause trouble. It just happened to be standing where I was going."
+        </p>
+    </div>
+
+    <div class="name-card leo-card">
+        <div class="card-glow"></div>
+
+        <h1>Leander</h1>
+        <h2>Sinclair</h2>
+
+        <div class="divider">
+            <span>✦</span>
+           <img src="lee.jpeg">
+            <span>✦</span>
+        </div>
+
+        <p class="role">
+            Automobile Engineer • Unwilling Romantic
+        </p>
+
+         <p class="quote">            
+        "The worst thing that ever happened to me was realizing I couldn't tell where friendship ended ."
+        </p>
+    </div>
+
+</section>
+
+
+<div class="next-tide-container">
+    <a href="tide.html" class="tide-btn">
+        Walk Along "When Time Met Tide"
+    </a>
+</div>
