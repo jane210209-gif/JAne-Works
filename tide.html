@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>NOVEL4</title>
+<meta name="description contents="JAne Bellarus">
+<style>
+
+    body{margin:0;
+          padding:0;
+          width:100%;
+          min-height:100vh;
+          overflow-x:hidden;
+
+          background-image: url("tide.jpeg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-color: #f7f4ee;
+
+          display: flex;
+          flex-direction: column;
+         };
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:rgba(0,0,0,0.45);
+
+    padding:20px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #f5f2eb;
+}
+
+h2,h3{
+    font-family:'Raleway',sans-serif;
+    
+    color:#d9cfc3;
+
+    letter-spacing:3px;
+   
+    text-transform:uppercase;
+}
+
+ p {
+    font-family: 'Cormorant Garamond', serif;
+    color:#d9cfc3;
+    line-height: 1.8;
+    font-size: 19px;
+}
+
+
+.tagline{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.6rem;
+
+    max-width:600px;
+
+    color:#f1e8dc;
+
+    font-style:italic;
+}
+
+header{
+    position:absolute;
+
+    top:0;
+    width:100%;
+
+    padding:25px 0;
+}
+
+nav{
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+}
+
+nav a{
+    text-decoration:none;
+
+    color:#f5f1ea;
+
+    font-family:'Raleway',sans-serif;
+
+    letter-spacing:1px;
+}
+
+
+.music-player{
+
+            width:320px;
+
+            padding:20px;
+
+            border-radius:25px;
+
+            background:rgba(255,255,255,0.15);
+
+            backdrop-filter:blur(15px);
+
+            text-align:center;
+
+            box-shadow:
+            0 0 20px rgba(255,255,255,0.3);
+
+            animation: floatPlayer 4s infinite ease-in-out;
+        }
+
+        @keyframes floatPlayer{
+
+            0%{
+                transform:translateY(0px);
+            }
+
+            50%{
+                transform:translateY(-10px);
+            }
+
+            100%{
+                transform:translateY(0px);
+                 }
+
+         }
+ music-player p{
+      color:white;
+ 
+      letter-spacing:2px;
+
+}
+
+.story-card{
+    max-width: 750px;
+    margin: 80px auto;
+    padding: 35px 40px;
+
+    background: rgba(15,15,20,0.75);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+}
+
+.story-card p{
+    color: #F5F2E8;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+
+.story-card{
+    box-shadow:
+    0 0 30px rgba(217,168,93,0.15),
+    0 10px 40px rgba(0,0,0,0.45);
+}
+
+.name-card{
+    position: relative;
+    width: 320px;
+
+    padding: 35px 30px;
+
+    background: rgba(8,8,8,0.78);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(212,175,115,0.25);
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 0 25px rgba(212,175,115,0.08),
+        0 10px 40px rgba(0,0,0,0.45);
+
+    overflow: hidden;
+}
+
+.card-glow{
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    background: radial-gradient(
+        circle,
+        rgba(212,175,115,0.15),
+        transparent 70%
+    );
+
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    pointer-events: none;
+}
+
+.name-card h1{
+    color: #F8F1E4;
+
+    font-size: 3rem;
+    font-weight: 300;
+
+    margin: 0;
+}
+
+.name-card h2{
+    color: #C9A36A;
+
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: 400;
+
+    margin-top: -10px;
+}
+
+.divider{
+    margin: 20px 0;
+    color: #C9A36A;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.divider::before,
+.divider::after{
+    content: "";
+    width: 60px;
+    height: 1px;
+
+    background: rgba(212,175,115,0.4);
+}
+
+.role{
+    color: #D9D2C4;
+
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+
+    margin-bottom: 25px;
+}
+
+.quote{
+    color: #EFE7D8;
+
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.main-characters{
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 80px auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    flex-wrap: wrap;
+}
+
+.main-characters{
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 100px auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+}
+
+.night-beach-player {
+  width: 340px;
+  margin: 40px auto;
+  padding: 22px;
+
+  border-radius: 28px;
+
+  background: linear-gradient(
+    160deg,
+    #050814,
+    #071a2b,
+    #0b2a3a
+  );
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.7),
+    inset 0 0 25px rgba(0, 180, 255, 0.08);
+
+  text-align: center;
+  font-family: "Arial", sans-serif;
+
+  position: relative;
+  overflow: hidden;
+
+  animation: floatNight 6s ease-in-out infinite;
+}
+
+
+@keyframes floatNight {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+
+.moon-glow {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+
+  background: radial-gradient(
+    circle,
+    rgba(180, 220, 255, 0.25),
+    transparent 70%
+  );
+
+  top: -70px;
+  right: -50px;
+
+  filter: blur(2px);
+}
+
+
+.track-display {
+  background: rgba(10, 20, 35, 0.6);
+  padding: 10px;
+
+  border-radius: 14px;
+
+  font-size: 13px;
+  letter-spacing: 1px;
+
+  color: #b9e6ff;
+  font-weight: 500;
+
+  border: 1px solid rgba(100, 180, 255, 0.2);
+
+  backdrop-filter: blur(10px);
+}
+
+
+.wave-bar {
+  height: 10px;
+  margin-top: 15px;
+
+  background: rgba(0, 80, 120, 0.25);
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.wave {
+  width: 30%;
+  height: 100%;
+
+  background: linear-gradient(90deg, #00d4ff, #5eead4);
+
+  animation: waveMove 2.5s infinite ease-in-out;
+}
+
+@keyframes waveMove {
+  0% { width: 25%; }
+  50% { width: 85%; }
+  100% { width: 25%; }
+}
+
+
+.tag {
+  margin-top: 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+
+  color: #7fbcd4;
+
+  opacity: 0.9;
+}
+
+
+.night-beach-player audio {
+  width: 100%;
+  margin-top: 10px;
+
+  filter: invert(0.85) hue-rotate(180deg) contrast(1.2);
+  border-radius: 10px;
+}
+
+.final-page-container{
+    display:flex;
+    justify-content:center;
+    margin:100px 0 140px;
+}
+
+.author-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:14px;
+
+    padding:20px 42px;
+
+    text-decoration:none;
+
+    color:#F5EFE6;
+
+    background:rgba(15,15,15,0.88);
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(212,175,115,0.25);
+    border-radius:50px;
+
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.35rem;
+    letter-spacing:1px;
+
+    transition:0.4s ease;
+
+    box-shadow:
+        0 0 30px rgba(212,175,115,0.08),
+        0 12px 40px rgba(0,0,0,0.55);
+}
+
+.author-btn::before{
+    content:"✒";
+    color:#D4AF73;
+    font-size:1rem;
+}
+
+.author-btn:hover{
+    color:#ffffff;
+
+    transform:translateY(-4px);
+
+    border-color:rgba(212,175,115,0.45);
+
+    box-shadow:
+        0 0 35px rgba(212,175,115,0.18),
+        0 15px 45px rgba(0,0,0,0.65);
+}
+
+</style>
+
+</head>
+ 
+<body>
+
+
+<h1> When Time Met Tide </h1>
+
+<div class="night-beach-player">
+
+  <div class="moon-glow"></div>
+
+  <div class="track-display">
+    NOW PLAYING ▷ Midnight Tide
+  </div>
+
+  <audio controls autoplay loop>
+    <source src="tide.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="wave-bar">
+    <div class="wave"></div>
+  </div>
+
+  <p class="tag">🌙 drift into the night • ocean whispers • repeat</p>
+
+</div>
+<div class="story-card">
+<p>Sovanna Fenty has always belonged to the ocean.</p>
+
+<p>As an ocean engineer, she understands its rhythms, its unpredictability, and the quiet language of tides better than most people understand each other. Warm, talkative, and impossible to ignore, she moves through life like sunlight scattering across water.</p>
+
+<p>Vieste, Italy, is meant to be just another assignment.</p>
+
+<p>Until she meets Theon Wakefield.</p>
+
+<p>Once an Olympic swimmer, Theon was built for water. Now he avoids it. After an accident ended his career, he disappeared from the world that once celebrated him, resurfacing only as a lifeguard in a quiet coastal village that has already decided what kind of man he is: distant, cold, untouchable.</p>
+
+<p>They are wrong.</p>
+
+<p>Because behind the gruff silence and guarded distance, Theon lives a life no one has ever seen. A life filled with hidden softness, from two dogs who follow him like shadows, to birds that perch like secrets, to a hamster he insists nobody is allowed to know about.</p>
+
+<p>Sovanna is the first disruption to his carefully contained world.</p>
+
+<p>She talks too much. She cares too easily. She refuses to be intimidated by silence.</p>
+
+<p>And Theon, who has spent years mastering the art of staying away from people, finds himself unable to look away from her.</p>
+
+<p>In a village where he is the storm and she is the sun, neither expects what happens when warmth begins to reach what was never meant to thaw.</p>
+
+<p>Because some collisions don’t destroy.</p>
+
+<p>They reshape everything they touch.</p>
+
+</div>
+
+<section class="main-characters">
+
+    <div class="name-card">
+        <div class="card-glow"></div>
+
+        <h1>Sovanna</h1>
+        <h2>Fenty</h2>
+
+        <div class="divider">
+            <span>✦</span>
+
+          <img src="sov.jpeg">
+
+             <span>✦</span>
+        </div>
+
+        <p class="role">
+            Ocean Engineer • The Bright Sun
+        </p>
+
+        <p class="quote">
+           "I like meeting people before meeting their reputation."
+        </p>
+    </div>
+
+    <div class="name-card leo-card">
+        <div class="card-glow"></div>
+
+        <h1>Theon</h1>
+        <h2>Wakefield</h2>
+
+        <div class="divider">
+            <span>✦</span>
+           <img src="theon.jpeg">
+            <span>✦</span>
+        </div>
+
+        <p class="role">
+            Retired Champion • The Grump
+        </p>
+
+         <p class="quote">            
+        "A man who left the world behind and found a home by the sea."
+        </p>
+    </div>
+
+</section>
+
+<div class="final-page-container">
+    <a href="last.html" class="author-btn">
+        A Final Note From The Author
+    </a>
+</div>
